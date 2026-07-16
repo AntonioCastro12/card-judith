@@ -9,13 +9,15 @@ function Hero() {
         </div>
 
         <p className="eyebrow">Moda femenina</p>
-        <p className="hero-category">Ropa y accesorios</p>
-        <h1>Judit White</h1>
-        <p className="hero-lead">Viste con estilo, seguridad y elegancia.</p>
-        <p className="hero-description">
-          Encuentra prendas modernas, cómodas y versátiles para crear outfits
-          únicos para cada ocasión.
-        </p>
+        <div className="hero-message">
+          <p className="hero-category">Ropa y accesorios</p>
+          <h1>Judit White</h1>
+          <p className="hero-lead">Viste con estilo, seguridad y elegancia.</p>
+          <p className="hero-description">
+            Encuentra prendas modernas, cómodas y versátiles para crear outfits
+            únicos para cada ocasión.
+          </p>
+        </div>
         <a className="primary-action" href="#categorias">
           <ShoppingBag size={19} aria-hidden="true" />
           Ver catálogo
