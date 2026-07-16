@@ -11,6 +11,12 @@ const cardUrl = import.meta.env.VITE_CARD_URL || window.location.href
 function App() {
   return (
     <main className="page-shell">
+      <div className="intro-zoom" aria-hidden="true">
+        <div className="intro-logo-shell">
+          <img src="/judit-white-logo-full.png" alt="" />
+        </div>
+      </div>
+
       <article className="digital-card" aria-label="Tarjeta digital Judit White">
         <Header />
         <Hero />
