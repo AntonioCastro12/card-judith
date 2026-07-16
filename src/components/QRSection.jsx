@@ -14,15 +14,18 @@ function QRSection({ cardUrl }) {
         </div>
       </div>
 
-      <div className="qr-card" aria-label="Código QR de Judit White">
-        <QRCodeCanvas
-          value={cardUrl}
-          size={190}
-          bgColor="#FFF7F3"
-          fgColor="#111111"
-          level="H"
-          includeMargin
-        />
+      <div className="qr-showcase">
+        <div className="qr-card" aria-label="Código QR de Judit White">
+          <QRCodeCanvas
+            value={cardUrl}
+            size={210}
+            bgColor="#FFF7F3"
+            fgColor="#111111"
+            level="H"
+            includeMargin
+          />
+        </div>
+        <p>Apunta la cámara de tu celular y conserva nuestro contacto.</p>
       </div>
     </section>
   )
