@@ -7,7 +7,9 @@ function Hero() {
         <div className="hero-logo-frame">
           <img className="hero-logo" src="/judit-white-logo-full.png" alt="Logo Judit White" />
         </div>
-        <p className="eyebrow">Moda femenina | Ropa y accesorios</p>
+
+        <p className="eyebrow">Moda femenina</p>
+        <p className="hero-category">Ropa y accesorios</p>
         <h1>Judit White</h1>
         <p className="hero-lead">Viste con estilo, seguridad y elegancia.</p>
         <p className="hero-description">

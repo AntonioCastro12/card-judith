@@ -15,9 +15,9 @@ function Header() {
         <span className="brand-icon" aria-hidden="true">
           <img src="/judit-white-logo-full.png" alt="" />
         </span>
-        <span>
-          <strong>Judit White</strong>
-          <small>Boutique digital</small>
+        <span className="brand-title">
+          <strong>Boutique digital</strong>
+          <small>Judith White</small>
         </span>
       </a>
 
