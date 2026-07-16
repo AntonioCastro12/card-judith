@@ -4,7 +4,9 @@ function Hero() {
   return (
     <section className="hero-section" id="inicio">
       <div className="hero-copy">
-        <img className="hero-logo" src="/judit-white-logo-full.png" alt="Logo Judit White" />
+        <div className="hero-logo-frame">
+          <img className="hero-logo" src="/judit-white-logo-full.png" alt="Logo Judit White" />
+        </div>
         <p className="eyebrow">Moda femenina | Ropa y accesorios</p>
         <h1>Judit White</h1>
         <p className="hero-lead">Viste con estilo, seguridad y elegancia.</p>
@@ -19,9 +21,12 @@ function Hero() {
         </a>
       </div>
 
-      <figure className="brand-portrait" id="coleccion">
+      <figure className="brand-portrait" id="coleccion" aria-label="Nueva colección Judit White">
         <img src="/judit-white-logo-full.png" alt="Logo Judit White" />
-        <figcaption>Nueva colección</figcaption>
+        <figcaption>
+          <span>Nueva colección</span>
+          <strong>Looks con presencia</strong>
+        </figcaption>
       </figure>
     </section>
   )

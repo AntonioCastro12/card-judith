@@ -22,16 +22,16 @@ const categories = [
 
 function Categories() {
   return (
-    <section className="section-block" id="categorias" aria-labelledby="categories-title">
+    <section className="section-block categories-block" id="categorias" aria-labelledby="categories-title">
       <div className="section-heading">
         <p className="section-kicker">Boutique</p>
-        <h2 id="categories-title">Categorías</h2>
+        <h2 id="categories-title">Explora por estilo</h2>
       </div>
 
       <div className="category-grid">
         {categories.map(({ name, icon: Icon }) => (
           <a className="category-card" href="#contacto" key={name}>
-            <Icon size={22} aria-hidden="true" />
+            <Icon size={21} aria-hidden="true" />
             <span>{name}</span>
           </a>
         ))}

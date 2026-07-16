@@ -8,36 +8,41 @@ import {
   ThumbsUp,
 } from 'lucide-react'
 
-const contactLinks = [
+const featuredLinks = [
   {
     label: 'Ver catálogo',
+    detail: 'Explora prendas disponibles',
     href: '#categorias',
     icon: ShoppingBag,
     style: 'dark',
   },
   {
     label: 'WhatsApp',
+    detail: 'Atención y pedidos',
     href: 'https://wa.me/?text=Hola%20Judit%20White%2C%20quiero%20ver%20su%20cat%C3%A1logo.',
     icon: MessageCircle,
     style: 'gold',
   },
+]
+
+const socialLinks = [
   {
     label: 'Facebook',
+    detail: 'Novedades',
     href: 'https://www.facebook.com/search/top?q=Judit%20White',
     icon: ThumbsUp,
-    style: 'light',
   },
   {
     label: 'Instagram',
+    detail: 'Outfits',
     href: 'https://www.instagram.com/',
     icon: Camera,
-    style: 'light',
   },
   {
     label: 'Ubicación',
+    detail: 'Cómo llegar',
     href: 'https://www.google.com/maps/search/Judit%20White',
     icon: MapPin,
-    style: 'light',
   },
 ]
 
@@ -60,30 +65,55 @@ function ContactButtons({ cardUrl }) {
   return (
     <section className="section-block contact-block" id="contacto" aria-labelledby="contact-title">
       <div className="section-heading">
-        <p className="section-kicker">Contacto</p>
-        <h2 id="contact-title">Conecta con Judit White</h2>
+        <p className="section-kicker">Contacto directo</p>
+        <h2 id="contact-title">Elige cómo visitarnos</h2>
       </div>
 
-      <div className="button-stack">
-        {contactLinks.map(({ label, href, icon: Icon, style }) => (
-          <a
-            className={`contact-button ${style}`}
-            href={href}
-            key={label}
-            target={href.startsWith('http') ? '_blank' : undefined}
-            rel={href.startsWith('http') ? 'noreferrer' : undefined}
-          >
-            <Icon size={20} aria-hidden="true" />
-            <span>{label}</span>
-            <Send size={16} aria-hidden="true" />
-          </a>
-        ))}
+      <div className="contact-panel">
+        <div className="featured-actions">
+          {featuredLinks.map(({ label, detail, href, icon: Icon, style }) => (
+            <a
+              className={`featured-action ${style}`}
+              href={href}
+              key={label}
+              target={href.startsWith('http') ? '_blank' : undefined}
+              rel={href.startsWith('http') ? 'noreferrer' : undefined}
+            >
+              <span className="action-icon">
+                <Icon size={20} aria-hidden="true" />
+              </span>
+              <span className="action-copy">
+                <strong>{label}</strong>
+                <small>{detail}</small>
+              </span>
+              <span className="action-arrow">
+                <Send size={16} aria-hidden="true" />
+              </span>
+            </a>
+          ))}
+        </div>
 
-        <button className="contact-button blush" type="button" onClick={shareCard}>
-          <Share2 size={20} aria-hidden="true" />
-          <span>Compartir tarjeta</span>
-          <Send size={16} aria-hidden="true" />
-        </button>
+        <div className="quick-actions">
+          {socialLinks.map(({ label, detail, href, icon: Icon }) => (
+            <a
+              className="quick-action"
+              href={href}
+              key={label}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Icon size={20} aria-hidden="true" />
+              <strong>{label}</strong>
+              <small>{detail}</small>
+            </a>
+          ))}
+
+          <button className="quick-action share-action" type="button" onClick={shareCard}>
+            <Share2 size={20} aria-hidden="true" />
+            <strong>Compartir</strong>
+            <small>Enviar tarjeta</small>
+          </button>
+        </div>
       </div>
     </section>
   )

@@ -9,7 +9,7 @@ function QRSection({ cardUrl }) {
           <QrCode size={19} />
         </span>
         <div>
-          <p className="section-kicker">QR</p>
+          <p className="section-kicker">Tarjeta digital</p>
           <h2 id="qr-title">Escanea y guarda nuestra tarjeta digital</h2>
         </div>
       </div>

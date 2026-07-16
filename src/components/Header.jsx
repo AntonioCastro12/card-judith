@@ -3,7 +3,7 @@ import { Sparkles } from 'lucide-react'
 function Header() {
   const links = [
     ['Inicio', '#inicio'],
-    ['Nueva colección', '#coleccion'],
+    ['Colección', '#coleccion'],
     ['Categorías', '#categorias'],
     ['Contacto', '#contacto'],
     ['QR', '#qr'],
@@ -17,14 +17,14 @@ function Header() {
         </span>
         <span>
           <strong>Judit White</strong>
-          <small>Moda femenina</small>
+          <small>Boutique digital</small>
         </span>
       </a>
 
       <nav className="nav-pills" aria-label="Secciones">
         {links.map(([label, href]) => (
           <a key={label} href={href}>
-            {label === 'Nueva colección' && <Sparkles size={13} aria-hidden="true" />}
+            {label === 'Colección' && <Sparkles size={13} aria-hidden="true" />}
             {label}
           </a>
         ))}
