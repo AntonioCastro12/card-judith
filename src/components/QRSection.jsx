@@ -18,7 +18,7 @@ function QRSection({ cardUrl }) {
         <QRCodeCanvas
           value={cardUrl}
           size={190}
-          bgColor="#FAF7F2"
+          bgColor="#FFF7F3"
           fgColor="#111111"
           level="H"
           includeMargin
